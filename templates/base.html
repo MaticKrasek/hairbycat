@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Hair Extensions by Cat{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="{{ url_for('home') }}">Domov</a>
+    <a href="{{ url_for('o_meni') }}">O meni</a>
+    <a href="{{ url_for('lasni_podaljski') }}">Lasni podaljški</a>
+    <a href="{{ url_for('nega') }}">Nega</a>
+    <a href="{{ url_for('cenik') }}">Cenik</a>
+    <a href="{{ url_for('kontakt') }}">Kontakt</a>
+  </nav>
+
+  {% block content %}{% endblock %}
+
+</body>
+</html>
