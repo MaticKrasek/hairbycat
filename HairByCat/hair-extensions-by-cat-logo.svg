@@ -1,9 +1,0 @@
-<svg viewBox="61 50 337 133" xmlns="http://www.w3.org/2000/svg">
-  <g fill="none" stroke="#D4537E" stroke-linecap="round">
-    <path d="M 90 65 C 120 80, 104 112, 90 128 C 76 144, 90 168, 120 160" stroke-width="3"/>
-    <path d="M 105 65 C 135 80, 119 112, 105 128 C 91 144, 105 168, 135 160" stroke-width="2" opacity="0.5"/>
-    <path d="M 120 65 C 150 80, 134 112, 120 128 C 106 144, 120 168, 150 160" stroke-width="1.5" opacity="0.28"/>
-  </g>
-  <text x="190" y="120" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#1A1A1A">Hair extensions</text>
-  <text x="190" y="153" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#1A1A1A">by Cat</text>
-</svg>
