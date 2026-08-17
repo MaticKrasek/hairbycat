@@ -17,7 +17,27 @@
     <a href="{{ url_for('kontakt') }}">Kontakt</a>
   </nav>
 
-  {% block content %}{% endblock %}
+  <div class="page-content">
+    {% block content %}{% endblock %}
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-column">
+      <h3>Info</h3>
+      <p>Hair Extensions by Cat<br>
+      Cvetna ulica 12, 1000 Ljubljana<br>
+      Tel: 031 234 567<br>
+      Email: info@hairbycat.si</p>
+    </div>
+    <div class="footer-column">
+      <h3>Družbena omrežja</h3>
+      <p>
+        <a href="#">Instagram</a><br>
+        <a href="#">Facebook</a><br>
+        <a href="#">TikTok</a>
+      </p>
+    </div>
+  </footer>
 
 </body>
 </html>
