@@ -73,6 +73,10 @@ body {
   margin-bottom: 15px;
 }
 
+.container--tight-top {
+  margin-top: 10px;
+}
+
 /* Subtitle section */
 .subtitle-section {
   max-width: 700px;
@@ -87,6 +91,11 @@ body {
   color: #000000;
 }
 
+.lasni-container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 /* Lasni podaljški - extension list */
 .extension-list {
   max-width: 800px;
@@ -95,6 +104,11 @@ body {
   display: flex;
   flex-direction: column;
   gap: 40px;
+}
+
+.extension-list--tight {
+  gap: 15px;
+  margin-bottom: 15px;
 }
 
 .extension-item {
@@ -126,6 +140,11 @@ body {
   transform: scale(1.05);
 }
 
+.o-meni-container {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
 /* O meni - certifikati */
 .o-meni-images {
   max-width: 800px;
@@ -137,14 +156,19 @@ body {
   gap: 30px;
 }
 
+.o-meni-images--tight {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
 .extension-text h3 {
   color: #d81b60;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
 .extension-text p {
-  line-height: 1.6;
-  margin-bottom: 10px;
+  line-height: 1.4;
+  margin-bottom: 6px;
 }
 
 .extension-text p:last-child {
@@ -208,8 +232,13 @@ body {
 .contact-section {
   max-width: 600px;
   margin: 40px auto;
+  margin-top: 10px;
   padding: 30px;
   text-align: center;
+}
+
+.contact-section h2 {
+  color: #d81b60;
 }
 
 .contact-form {
