@@ -1,10 +1,17 @@
+import os
+import smtplib
 import sqlite3
+from email.message import EmailMessage
 from pathlib import Path
 
+from dotenv import load_dotenv
 from flask import Flask, flash, redirect, render_template, request, url_for
+
+load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent
 DATABASE = BASE_DIR / "hairbycat.db"
+CONTACT_RECIPIENT = "catrion92@live.co.uk"
 
 app = Flask(__name__)
 app.secret_key = "replace-this-with-a-random-secret-key"
@@ -26,6 +33,34 @@ def init_db():
 
 
 init_db()
+
+
+def send_contact_email(name, email, message):
+    smtp_host = os.environ.get("SMTP_HOST")
+    smtp_port = os.environ.get("SMTP_PORT")
+    smtp_username = os.environ.get("SMTP_USERNAME")
+    smtp_password = os.environ.get("SMTP_PASSWORD")
+
+    if not all([smtp_host, smtp_port, smtp_username, smtp_password]):
+        print("E-pošta ni bila poslana: manjkajo SMTP nastavitve v .env datoteki.", flush=True)
+        return
+
+    email_message = EmailMessage()
+    email_message["Subject"] = f"Novo sporočilo s spletne strani – {name}"
+    email_message["From"] = smtp_username
+    email_message["To"] = CONTACT_RECIPIENT
+    email_message["Reply-To"] = email
+    email_message.set_content(
+        f"Ime in priimek: {name}\nE-pošta: {email}\n\nSporočilo:\n{message}"
+    )
+
+    try:
+        with smtplib.SMTP(smtp_host, int(smtp_port)) as server:
+            server.starttls()
+            server.login(smtp_username, smtp_password)
+            server.send_message(email_message)
+    except Exception as e:
+        print(f"E-pošte ni bilo mogoče poslati: {e}", flush=True)
 
 
 @app.route("/", methods=["GET"])
@@ -79,6 +114,8 @@ def contact():
     )
     conn.commit()
     conn.close()
+
+    send_contact_email(name, email, message)
 
     flash("Sporočilo je bilo uspešno poslano. Kmalu vas kontaktiramo!", "success")
     return redirect(url_for("kontakt"))
