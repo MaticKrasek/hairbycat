@@ -16,7 +16,7 @@ DATABASE = BASE_DIR / "hairbycat.db"
 CONTACT_RECIPIENT = "catrion92@live.co.uk"
 
 app = Flask(__name__)
-app.secret_key = "replace-this-with-a-random-secret-key"
+app.secret_key = os.environ.get("SECRET_KEY", "dev-only-fallback-key")
 
 
 def init_db():
