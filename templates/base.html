@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="sl">
+<html lang="{{ lang }}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,12 +9,22 @@
 <body>
 
   <nav class="navbar">
-    <a href="{{ url_for('home') }}">Domov</a>
-    <a href="{{ url_for('o_meni') }}">O meni</a>
-    <a href="{{ url_for('lasni_podaljski') }}">Lasni podaljški</a>
-    <a href="{{ url_for('nega') }}">Nega</a>
-    <a href="{{ url_for('cenik') }}">Cenik</a>
-    <a href="{{ url_for('kontakt') }}">Kontakt</a>
+    <div class="nav-links">
+      <a href="{{ url_for('home_' + lang) }}">{{ t.common.nav.home }}</a>
+      <a href="{{ url_for('o_meni_' + lang) }}">{{ t.common.nav.o_meni }}</a>
+      <a href="{{ url_for('lasni_podaljski_' + lang) }}">{{ t.common.nav.lasni_podaljski }}</a>
+      <a href="{{ url_for('nega_' + lang) }}">{{ t.common.nav.nega }}</a>
+      <a href="{{ url_for('cenik_' + lang) }}">{{ t.common.nav.cenik }}</a>
+      <a href="{{ url_for('kontakt_' + lang) }}">{{ t.common.nav.kontakt }}</a>
+    </div>
+    <div class="lang-switcher">
+      <a href="{{ url_for(page + '_sl') }}" class="{{ 'active' if lang == 'sl' else '' }}">
+        <img src="{{ url_for('static', filename='images/flag-si.svg') }}" alt="Slovenščina">
+      </a>
+      <a href="{{ url_for(page + '_en') }}" class="{{ 'active' if lang == 'en' else '' }}">
+        <img src="{{ url_for('static', filename='images/flag-gb.svg') }}" alt="English">
+      </a>
+    </div>
   </nav>
 
   <div class="page-content">
@@ -29,7 +39,7 @@
       Email: info@hairbycat.si</p>
     </div>
     <div class="footer-column">
-      <h3>Družbena omrežja</h3>
+      <h3>{{ t.common.social_media }}</h3>
       <p>
         <a href="#">Instagram</a><br>
         <a href="https://www.facebook.com/people/Hair-extensions-by-Cat/61588915896767/">Facebook</a><br>

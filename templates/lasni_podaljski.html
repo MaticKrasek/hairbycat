@@ -1,35 +1,26 @@
 {% extends "base.html" %}
 
-{% block title %}Lasni podaljški - Hair Extensions by Cat{% endblock %}
+{% block title %}{{ t.lasni_podaljski.title }}{% endblock %}
 
 {% block content %}
   <main class="container lasni-container">
-    <h2>Lasni podaljški</h2>
+    <h2>{{ t.lasni_podaljski.heading }}</h2>
   </main>
 
   <section class="extension-list extension-list--tight">
-    <div class="extension-item">
-      <a href="{{ url_for('static', filename='images/tape.jpg') }}" target="_blank" class="extension-image">
-        <img src="{{ url_for('static', filename='images/tape.jpg') }}" alt="Tape">
-      </a>
-      <div class="extension-text">
-        <h3>Tape-Ins</h3>
-        <p><strong>Namestitev:</strong> Tanki prameni las na dvostranskem lepilnem traku se zalepijo tik ob korenine - en trak nad in en pod tanko plastjo naravnih las. Brez toplote, tekočega lepila ali obročkov.</p>
-        <p><strong>Trajanje:</strong> Približno 4-8 tednov, ko lasje zrastejo, jih premestimo višje. Podaljški pri pravilni negi zdržijo 6-12 mesecev in se lahko ponovno uporabijo.</p>
-        <p><strong>Prednosti:</strong> Ena najhitrejših metod namestitve (30-45 minut), ležijo ravno na glavi, so lahki in udobni, enostavno vzdrževanje.</p>
+    {% set images = ["images/tape.jpg", "images/micro.png"] %}
+    {% for item in t.lasni_podaljski.methods %}
+      <div class="extension-item">
+        <a href="{{ url_for('static', filename=images[loop.index0]) }}" target="_blank" class="extension-image">
+          <img src="{{ url_for('static', filename=images[loop.index0]) }}" alt="{{ item.image_alt }}">
+        </a>
+        <div class="extension-text">
+          <h3>{{ item.title }}</h3>
+          {% for point in item.points %}
+            <p><strong>{{ point.label }}:</strong> {{ point.text }}</p>
+          {% endfor %}
+        </div>
       </div>
-    </div>
-
-    <div class="extension-item">
-      <a href="{{ url_for('static', filename='images/micro.png') }}" target="_blank" class="extension-image">
-        <img src="{{ url_for('static', filename='images/micro.png') }}" alt="I-Tips">
-      </a>
-      <div class="extension-text">
-        <h3>Micro-Links</h3>
-        <p><strong>Namestitev:</strong> Majhen pramen podaljškov se skupaj s tankim pramenom naravnih las vpelje skozi silikonski obroček. Obroček nato stisnemo s posebnimi kleščami, da se trdno zapre.</p>
-        <p><strong>Trajanje:</strong> Približno 2-3 mesece, ko lasje zrastejo, jih premestimo višje. Ob dobri negi lahko podaljške uporabimo za več ciklov namestitve.</p>
-        <p><strong>Prednosti:</strong> Popolnoma brez toplote, lepila in kemikalij. Prilagodljiva namestitev (obroček lahko po potrebi rahlo premaknemo ali odpremo), primerna za širok razpon debeline las, hitro in enostavno odstranljiva brez poškodb naravnih las.</p>
-      </div>
-    </div>
+    {% endfor %}
   </section>
 {% endblock %}

@@ -1,13 +1,14 @@
 {% extends "base.html" %}
 
-{% block title %}Nega - Hair Extensions by Cat{% endblock %}
+{% block title %}{{ t.nega.title }}{% endblock %}
 
 {% block content %}
   <main class="container container--tight-top">
-    <h2>Nega</h2>
+    <h2>{{ t.nega.heading }}</h2>
     <br>
     <br>
-    <p>Pravilna nega vaših novih podaljškov je ključna, da ostanejo lepi in obstojni čim dlje. Prvih 48 ur se izogibajte umivanju las, tesnemu spenjanju in močnemu potenju ali pari. Ko začnete z umivanjem, uporabljajte šampon brez sulfatov. Lase vedno nežno skrtačite (pred in po umivanju) od konic navzgor s krtačo, primerno za podaljške - še posebej previdno okoli mest pritrditve. Spanje s ohlapno spleteno kito ali mehkim vozlom pomaga preprečiti zapletanje čez noč.</p>
-    <p>Redno vzdrževanje je enako pomembno kot vsakodnevna nega. Glede na uporabljeno metodo priporočamo kontrolni pregled in premestitev približno vsakih 6-8 tednov (Tape-Ins) oz. 8-10 tednov (Micro-Links), saj vaši naravni lasje rastejo in se spojni deli oddaljujejo od lasišča. Izogibajte se oljem in težkim balzamom v bližini korenin, saj lahko oslabijo spoje in povzročijo zdrs. Z ustrezno nego bodo vaši podaljški med termini ostali mehki, zdravi in polni življenja.</p>
+    {% for paragraph in t.nega.paragraphs %}
+      <p>{{ paragraph }}</p>
+    {% endfor %}
   </main>
 {% endblock %}

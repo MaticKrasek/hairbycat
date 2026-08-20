@@ -1,22 +1,21 @@
 {% extends "base.html" %}
 
-{% block title %}O meni - Hair Extensions by Cat{% endblock %}
+{% block title %}{{ t.o_meni.title }}{% endblock %}
 
 {% block content %}
   <main class="container o-meni-container">
-    <h2>O meni</h2>
-    <p>Živjo, sem Cat.</p>
-    <p>Že od nekdaj me navdušujejo lasje, lepota in samozavest, ki jo prinese dober občutek v lastni koži. Odločila sem se, da to strast spremenim v posel, saj sem si želela ustvariti nekaj svojega in se ukvarjati s tem, kar resnično rada počnem.</p>
-    <p>Moj cilj je, da se vsaka moja stranka počuti sproščeno in slišano ter da je na koncu zadovoljna z rezultatom. Verjamem, da morajo podaljški izgledati naravno, biti udobni in prilagojeni vsakemu posamezniku.</p>
-    <p>Ponujam različne metode podaljševanja. Svoje storitve ponujam mobilno, torej v udobju vašega doma, vikenda, pisarne... Zame ta posel pomeni več kot le lase - želim ženskam pomagati, da se počutijo samozavestne, lepe in zadovoljne same s seboj.</p>
+    <h2>{{ t.o_meni.heading }}</h2>
+    {% for paragraph in t.o_meni.paragraphs %}
+      <p>{{ paragraph }}</p>
+    {% endfor %}
   </main>
 
   <section class="o-meni-images o-meni-images--tight">
     <a href="{{ url_for('static', filename='images/certifikat1.jpg') }}" target="_blank" class="extension-image">
-      <img src="{{ url_for('static', filename='images/certifikat1.jpg') }}" alt="Certifikat 1">
+      <img src="{{ url_for('static', filename='images/certifikat1.jpg') }}" alt="{{ t.o_meni.cert_alt_1 }}">
     </a>
     <a href="{{ url_for('static', filename='images/certifikat2.jpg') }}" target="_blank" class="extension-image">
-      <img src="{{ url_for('static', filename='images/certifikat2.jpg') }}" alt="Certifikat 2">
+      <img src="{{ url_for('static', filename='images/certifikat2.jpg') }}" alt="{{ t.o_meni.cert_alt_2 }}">
     </a>
   </section>
 {% endblock %}

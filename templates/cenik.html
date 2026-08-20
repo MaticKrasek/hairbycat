@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 
-{% block title %}Cenik - Hair Extensions by Cat{% endblock %}
+{% block title %}{{ t.cenik.title }}{% endblock %}
 
 {% block content %}
   <main class="container container--tight-top">
-    <h2>Cenik</h2>
+    <h2>{{ t.cenik.heading }}</h2>
   </main>
 
   <section class="cenik-table-wrapper">
@@ -12,40 +12,27 @@
       <thead>
         <tr>
           <th></th>
-          <th>Celotno lasišče (200g)</th>
-          <th>Polovica lasišča (100g)</th>
-          <th>Premestitev</th>
-          <th>Odstranitev</th>
+          {% for column in t.cenik.columns %}
+            <th>{{ column }}</th>
+          {% endfor %}
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th>Tape-Ins</th>
-          <td>160 €</td>
-          <td>110 €</td>
-          <td>90 €</td>
-          <td>40 €</td>
-        </tr>
-        <tr>
-          <th>Micro-Links</th>
-          <td>220 €</td>
-          <td>150 €</td>
-          <td>120 €</td>
-          <td>50 €</td>
-        </tr>
-        <tr>
-          <th>Micro-Links (Nano)</th>
-          <td>240 €</td>
-          <td>170 €</td>
-          <td>130 €</td>
-          <td>50 €</td>
-        </tr>
+        {% for row in t.cenik.rows %}
+          <tr>
+            <th>{{ row.label }}</th>
+            {% for price in row.prices %}
+              <td>{{ price }}</td>
+            {% endfor %}
+          </tr>
+        {% endfor %}
       </tbody>
     </table>
   </section>
 
   <section class="cenik-note">
-    <p>Cene veljajo samo za storitev. Podaljške si priskrbite sami, ali pa vam pri izbiri in nakupu pomagam jaz. V primeru nakupa preko mene, se podaljški obračunajo posebej (cena odvisna od proizvajalca, materiala, dolžine...).</p>
-    <p>Poleg podaljškov nudim tudi oblikovanje pričesk (ravnanje, kodranje, pričeske za posebne priložnosti, poročne pričeske...). Cene so po dogovoru.</p>
+    {% for note in t.cenik.notes %}
+      <p>{{ note }}</p>
+    {% endfor %}
   </section>
 {% endblock %}

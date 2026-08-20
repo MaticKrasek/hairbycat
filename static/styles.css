@@ -28,10 +28,11 @@ body {
 .navbar {
   background-color: #f8bbd0;
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   flex-shrink: 0;
-  justify-content: center;
-  gap: 10px 24px;
+  justify-content: space-between;
+  gap: 10px 20px;
   padding: 15px 20px;
 }
 
@@ -47,6 +48,45 @@ body {
 .navbar a:hover {
   background-color: #f48fb1;
   color: #ffffff;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex: 1;
+  gap: 10px 24px;
+}
+
+.lang-switcher {
+  display: flex;
+  flex-shrink: 0;
+  gap: 8px;
+}
+
+.lang-switcher a {
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  opacity: 0.6;
+  transition: opacity 0.2s ease, background-color 0.2s ease;
+}
+
+.lang-switcher a:hover {
+  background-color: transparent;
+  opacity: 0.85;
+}
+
+.lang-switcher a.active {
+  background-color: #ffffff;
+  opacity: 1;
+}
+
+.lang-switcher img {
+  width: 26px;
+  height: auto;
+  display: block;
+  border-radius: 3px;
 }
 
 /* Content container */
