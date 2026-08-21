@@ -261,7 +261,51 @@ body {
   margin-bottom: 0;
 }
 
-@media (max-width: 600px) {
+/* Mobile layout */
+@media (max-width: 768px) {
+  body {
+    height: auto;
+    overflow: visible;
+  }
+
+  .page-content {
+    overflow-y: visible;
+  }
+
+  .navbar {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .lang-switcher {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .subtitle-section h3 {
+    font-size: 1.4rem;
+  }
+
+  .container,
+  .subtitle-section,
+  .extension-list,
+  .o-meni-images,
+  .cenik-table-wrapper,
+  .cenik-note,
+  .contact-section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .cenik-table th,
+  .cenik-table td {
+    padding: 8px;
+  }
+
   .extension-item {
     flex-direction: column;
     text-align: center;
