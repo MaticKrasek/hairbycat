@@ -394,11 +394,18 @@ body {
   background-color: #880e4f;
   color: #ffe3ec;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   flex-shrink: 0;
+  gap: 6px;
+  padding: 18px 20px;
+}
+
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
-  padding: 18px 20px;
 }
 
 .footer-column {
@@ -422,4 +429,10 @@ body {
 
 .footer-column a:hover {
   text-decoration: underline;
+}
+
+.footer-signature {
+  text-align: center;
+  font-size: 0.7rem;
+  color: #cccccc;
 }
