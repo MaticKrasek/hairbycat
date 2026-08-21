@@ -301,9 +301,16 @@ body {
     padding-right: 16px;
   }
 
+  .cenik-table {
+    table-layout: auto;
+    width: auto;
+    min-width: 600px;
+  }
+
   .cenik-table th,
   .cenik-table td {
     padding: 8px;
+    white-space: nowrap;
   }
 
   .extension-item {
