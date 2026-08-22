@@ -17,6 +17,31 @@
       <a href="{{ url_for('cenik_' + lang) }}">{{ t.common.nav.cenik }}</a>
       <a href="{{ url_for('kontakt_' + lang) }}">{{ t.common.nav.kontakt }}</a>
     </div>
+
+    <div class="mobile-nav">
+      <a href="{{ url_for('home_' + lang) }}" class="home-icon-link" aria-label="{{ t.common.nav.home }}">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 11 L12 3 L21 11" />
+          <path d="M5 10 V20 H19 V10" />
+        </svg>
+      </a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="{{ t.common.menu_label }}">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+      </label>
+      <div class="dropdown-menu">
+        <a href="{{ url_for('o_meni_' + lang) }}">{{ t.common.nav.o_meni }}</a>
+        <a href="{{ url_for('lasni_podaljski_' + lang) }}">{{ t.common.nav.lasni_podaljski }}</a>
+        <a href="{{ url_for('nega_' + lang) }}">{{ t.common.nav.nega }}</a>
+        <a href="{{ url_for('cenik_' + lang) }}">{{ t.common.nav.cenik }}</a>
+        <a href="{{ url_for('kontakt_' + lang) }}">{{ t.common.nav.kontakt }}</a>
+      </div>
+    </div>
+
     <div class="lang-switcher">
       <a href="{{ url_for(page + '_sl') }}" class="{{ 'active' if lang == 'sl' else '' }}">
         <img src="{{ url_for('static', filename='images/flag-si.svg') }}" alt="Slovenščina">

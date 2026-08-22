@@ -10,6 +10,7 @@ TRANSLATIONS = {
                 "kontakt": "Kontakt",
             },
             "social_media": "Družbena omrežja",
+            "menu_label": "Meni",
         },
         "home": {
             "subtitle": "Lepi lasje, brez odhoda od doma.",
@@ -97,6 +98,7 @@ TRANSLATIONS = {
                 "kontakt": "Contact",
             },
             "social_media": "Social Media",
+            "menu_label": "Menu",
         },
         "home": {
             "subtitle": "Beautiful hair, without leaving home.",
