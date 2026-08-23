@@ -13,6 +13,9 @@ TRANSLATIONS = {
             "menu_label": "Meni",
         },
         "home": {
+            "title": "Podaljševanje las na domu | Gorenjska, Ljubljana in okolica – Hair extensions by Cat",
+            "meta_description": "Profesionalno podaljševanje las na vašem domu na Gorenjskem in Ljubljani z okolico. Tape-In in Micro-Link metode. Sanjski lasje so na dosegu roke.",
+            "h1": "Podaljševanje las na domu - Gorenjska in Ljubljana z okolico",
             "subtitle": "Lepi lasje, brez odhoda od doma.",
         },
         "o_meni": {
@@ -101,6 +104,9 @@ TRANSLATIONS = {
             "menu_label": "Menu",
         },
         "home": {
+            "title": "Mobile Hair Extensions | Gorenjska, Ljubljana Area – Hair Extensions by Cat",
+            "meta_description": "Professional hair extensions at your home in Gorenjska and Ljubljana region. Tape-In and Micro-Link methods. Your dream hair is within reach.",
+            "h1": "Mobile Hair Extensions - Gorenjska and Ljubljana Area",
             "subtitle": "Beautiful hair, without leaving home.",
         },
         "o_meni": {

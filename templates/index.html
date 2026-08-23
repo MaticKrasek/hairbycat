@@ -1,11 +1,19 @@
 {% extends "base.html" %}
 
+{% block title %}{{ t.home.title }}{% endblock %}
+
+{% block meta_description %}<meta name="description" content="{{ t.home.meta_description }}">{% endblock %}
+
 {% block content %}
   <main class="container">
     <img src="{{ url_for('static', filename='hair-extensions-by-cat-logo.svg') }}" alt="Hair Extensions by Cat" class="logo">
   </main>
 
+  <section class="home-heading-section">
+    <h1>{{ t.home.h1 }}</h1>
+  </section>
+
   <section class="subtitle-section">
-    <h3>{{ t.home.subtitle }}</h3>
+    <h2>{{ t.home.subtitle }}</h2>
   </section>
 {% endblock %}
