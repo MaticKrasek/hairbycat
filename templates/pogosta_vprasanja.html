@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}{{ t.pogosta_vprasanja.title }}{% endblock %}
+
+{% block meta_description %}
+  <meta name="description" content="{{ t.pogosta_vprasanja.meta_description }}">
+{% endblock %}
+
+{% block content %}
+  <main class="container container--tight-top">
+    <h2>{{ t.pogosta_vprasanja.heading }}</h2>
+  </main>
+
+  <section class="faq-list">
+    {% for item in t.pogosta_vprasanja.questions %}
+      <details class="faq-item">
+        <summary>{{ item.question }}</summary>
+        <p>{{ item.answer }}</p>
+      </details>
+    {% endfor %}
+  </section>
+{% endblock %}

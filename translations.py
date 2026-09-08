@@ -7,6 +7,7 @@ TRANSLATIONS = {
                 "lasni_podaljski": "Lasni podaljški",
                 "nega": "Nega",
                 "cenik": "Cenik",
+                "pogosta_vprasanja": "Pogosta vprašanja",
                 "kontakt": "Kontakt",
             },
             "social_media": "Družbena omrežja",
@@ -76,6 +77,53 @@ TRANSLATIONS = {
                 "Poleg podaljškov nudim tudi oblikovanje pričesk (ravnanje, kodranje, pričeske za posebne priložnosti, poročne pričeske...). Cene so po dogovoru.",
             ],
         },
+        "pogosta_vprasanja": {
+            "title": "Pogosta vprašanja - Hair Extensions by Cat",
+            "meta_description": "Odgovori na pogosta vprašanja o podaljševanju las na domu - metode, cena, trajanje, nega in dogovarjanje termina.",
+            "heading": "Pogosta vprašanja",
+            "questions": [
+                {
+                    "question": "Kako poteka namestitev na domu?",
+                    "answer": "Pridem k vam domov (ali na dogovorjeno lokacijo na Gorenjskem, v Ljubljani in okolici) z vso potrebno opremo. Potrebujem le stol, mizo in vtičnico.",
+                },
+                {
+                    "question": "Katere metode podaljševanja ponujate?",
+                    "answer": "Ponujam Tape-In in Micro-Link (vključno z Nano) metode. Skupaj izberemo tisto, ki najbolj ustreza vašim lasem in življenjskemu slogu.",
+                },
+                {
+                    "question": "Koliko časa traja namestitev?",
+                    "answer": "Tape-In traja približno 30-45 minut, Micro-Links pa nekoliko dlje, odvisno od količine las.",
+                },
+                {
+                    "question": "Koliko časa podaljški zdržijo?",
+                    "answer": "Tape-Ins premeščamo vsakih 4-8 tednov, Micro-Links vsakih 2-3 mesece. Pri pravilni negi lahko lase ponovno uporabimo tudi 6-12 mesecev.",
+                },
+                {
+                    "question": "Ali moram sama priskrbeti lase?",
+                    "answer": "Ne nujno - lahko jih priskrbite sami ali pa vam pomagam pri izbiri in nakupu. V tem primeru se strošek las obračuna posebej.",
+                },
+                {
+                    "question": "Ali podaljški poškodujejo naravne lase?",
+                    "answer": "Pravilno nameščeni in negovani podaljški naravnih las ne poškodujejo. Pomembno je redno vzdrževanje in ustrezna nega.",
+                },
+                {
+                    "question": "Ali lahko s podaljški normalno umivam in urejam lase?",
+                    "answer": "Da, po prvih 48 urah lahko lase umivate in oblikujete kot običajno - priporočam le šampon brez sulfatov in previdnost pri mestih pritrditve.",
+                },
+                {
+                    "question": "Koliko stane namestitev?",
+                    "answer": "Cene se razlikujejo glede na metodo in količino las (celotno ali polovično lasišče). Poglejte stran Cenik za natančen pregled.",
+                },
+                {
+                    "question": "Kako se dogovorim za termin?",
+                    "answer": "Kontaktirajte me preko obrazca na strani Kontakt, po e-pošti ali družbenih omrežjih, dogovorimo se za termin, ki vam ustreza.",
+                },
+                {
+                    "question": "Ali podaljški izgledajo naravno na tanjših laseh?",
+                    "answer": "Da - skupaj izberemo metodo in količino podaljškov, ki bo izgledala naravno in ne bo preobremenila vaših naravnih las.",
+                },
+            ],
+        },
         "kontakt": {
             "title": "Kontakt - Hair Extensions by Cat",
             "heading": "Kontakt",
@@ -98,6 +146,7 @@ TRANSLATIONS = {
                 "lasni_podaljski": "Hair Extensions",
                 "nega": "Hair Care",
                 "cenik": "Pricing",
+                "pogosta_vprasanja": "FAQ",
                 "kontakt": "Contact",
             },
             "social_media": "Social Media",
@@ -165,6 +214,53 @@ TRANSLATIONS = {
             "notes": [
                 "Prices apply to the service only. You can supply your own hair extensions, or I can help you choose and purchase them. If purchased through me, the hair is billed separately (price depends on manufacturer, material, length...).",
                 "In addition to extensions, I also offer hairstyling (straightening, curling, special occasion styles, bridal hairstyles...). Prices are by arrangement.",
+            ],
+        },
+        "pogosta_vprasanja": {
+            "title": "FAQ - Hair Extensions by Cat",
+            "meta_description": "Answers to frequently asked questions about mobile hair extensions - methods, pricing, duration, aftercare, and booking.",
+            "heading": "Frequently Asked Questions",
+            "questions": [
+                {
+                    "question": "How does mobile installation work?",
+                    "answer": "I come to you - at home, or an agreed location in Gorenjska, Ljubljana and the surrounding area - with all the equipment needed. I just need a chair, a table, and a power outlet.",
+                },
+                {
+                    "question": "What extension methods do you offer?",
+                    "answer": "I offer Tape-In and Micro-Link (including Nano) methods. We'll choose together which suits your hair and lifestyle best.",
+                },
+                {
+                    "question": "How long does installation take?",
+                    "answer": "Tape-Ins take about 30-45 minutes, Micro-Links a bit longer depending on the amount of hair.",
+                },
+                {
+                    "question": "How long do extensions last?",
+                    "answer": "Tape-Ins are repositioned every 4-8 weeks, Micro-Links every 2-3 months. With proper care, the hair can be reused for 6-12 months.",
+                },
+                {
+                    "question": "Do I need to supply the hair myself?",
+                    "answer": "Not necessarily - you can supply your own, or I can help you choose and purchase them. If purchased through me, the hair is billed separately.",
+                },
+                {
+                    "question": "Will extensions damage my natural hair?",
+                    "answer": "Properly applied and maintained extensions won't damage your natural hair. Regular maintenance and proper aftercare are key.",
+                },
+                {
+                    "question": "Can I wash and style my hair normally?",
+                    "answer": "Yes, after the first 48 hours you can wash and style as usual - I just recommend a sulfate-free shampoo and care around the attachment points.",
+                },
+                {
+                    "question": "How much does it cost?",
+                    "answer": "Prices vary by method and amount of hair (full or half head). See the Pricing page for full details.",
+                },
+                {
+                    "question": "How do I book an appointment?",
+                    "answer": "Reach out via the Contact form, email, or social media, and we'll arrange a time that works for you.",
+                },
+                {
+                    "question": "Will extensions look natural on finer hair?",
+                    "answer": "Yes - we choose the method and amount of hair together so it looks natural and doesn't put too much strain on your own hair.",
+                },
             ],
         },
         "kontakt": {

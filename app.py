@@ -106,6 +106,13 @@ def cenik():
     return render_template("cenik.html", lang=lang, page="cenik", t=TRANSLATIONS[lang])
 
 
+@app.route("/pogosta-vprasanja", endpoint="pogosta_vprasanja_sl")
+@app.route("/en/pogosta-vprasanja", endpoint="pogosta_vprasanja_en")
+def pogosta_vprasanja():
+    lang = get_lang()
+    return render_template("pogosta_vprasanja.html", lang=lang, page="pogosta_vprasanja", t=TRANSLATIONS[lang])
+
+
 @app.route("/kontakt", endpoint="kontakt_sl")
 @app.route("/en/kontakt", endpoint="kontakt_en")
 def kontakt():
